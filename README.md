@@ -19,6 +19,11 @@ To get a local copy up and running follow these simple example steps. You can ei
 - Twitter: [@arthurmoises](https://twitter.com/arthurmoises)
 - LinkedIn: [Arthur Borges](https://linkedin.com/in/arthurmoises) 
 
+👤 **Andres Felipe Castañeda Ramos**
+- Github: [@afcastaneda223](https://github.com/afcastaneda223)
+- Twitter: [@afcastaneda](https://twitter.com/afcastaneda)
+- Linkedin: [Andres Felipe Castañeda](www.linkedin.com/in/andres-castaneda223)
+
 👤 **Rhyine Stewart**
 
 - GitHub: [@githubhandle](https://github.com/the-catalyst-mc)
