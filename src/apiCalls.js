@@ -10,7 +10,7 @@ class APIUpdate{
         // return meals
             .then(response => response.json())
             .then(json => {
-                mealArray.mealList = json.meals
+                
             }
             //     {
             //     json.meals.forEach(element => {
