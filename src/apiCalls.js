@@ -27,6 +27,4 @@ class APIUpdate{
 }
 
 const apiCall = new APIUpdate()
-
-
 export { apiCall as default }
