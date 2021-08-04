@@ -1,14 +1,34 @@
+import apiCalls from "./apiCalls";
+
 class Modal {
     openModal = async (dish) => {
         const closeBtn = await document.querySelector('.close--button');
         const commentBtn = await dish.querySelector('.load-comment');
         const modalWindow = document.querySelector('.modalholder');
         commentBtn.addEventListener('click', () => {
-            modalWindow.style.display = 'flex';
+            modalWindow.style.display = 'block';
         })
         closeBtn.addEventListener('click', () => {
             modalWindow.style.display = 'none';
         })
+    }
+    
+    getDishID = async (dish) => {
+        const myID = await dish.querySelector('.load-comment').id;
+        return myID;
+    }
+
+    dishURL = async (dish) => {
+        let commentBtn = await dish.querySelector('.load-comment');
+        let id = await dish.querySelector('.load-comment').id;
+        const url = await `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
+
+        commentBtn.addEventListener('click', async () => {
+            apiCalls.mealPopulate(url);
+        })
+
+        // console.log(url);
+        // return url
     }
 }
 
