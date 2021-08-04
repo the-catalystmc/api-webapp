@@ -5,6 +5,7 @@ import apiCall from './apiCalls'
 
 window.addEventListener(('load'), () => {
   apiCall.asyncPopulate();
+  apiCall.countMeals();
 })
 
 
