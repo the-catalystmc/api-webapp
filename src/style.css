@@ -1,7 +1,22 @@
+.modalholder {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  overflow-y: scroll;
+}
+
 .container__modal {
+  background: white;
+  padding: 1rem 0;
+  border-radius: 12px;
+  border: 3px black solid;
   text-align: center;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
+
 }
 
 .close--button {

@@ -1,3 +1,5 @@
+import modal from './modal'
+
 class APIUpdate{
     getBeefBtn = document.getElementById('beefBtn');
     getTemplate = document.querySelector('.mealTemplate');
@@ -17,6 +19,7 @@ class APIUpdate{
                     dish.querySelector('.card-img-top').src = element.strMealThumb;
                     dish.querySelector('.card-title').innerText = element.strMeal;
                     this.container.appendChild(dish);
+                    modal.openModal(dish);
                 });
             })
         })
