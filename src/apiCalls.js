@@ -1,7 +1,6 @@
 import likeCall from './likeCalls';
 
 class APIUpdate{
-    getBeefBtn = document.getElementById('beefBtn');
     getTemplate = document.querySelector('.mealTemplate');
     container = document.querySelector('.cont');
 
@@ -9,13 +8,6 @@ class APIUpdate{
         const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=beef')
         const mealInfo = await response.json();
         return mealInfo
-    }
-
-    countMeals = async () =>{
-        this.asyncRequest().then((data) =>{
-            this.getBeefBtn.innerText = 'Beef ' + (data.meals.length)
-            return data.meals.length
-        })
     }
     
     asyncPopulate = async () => {

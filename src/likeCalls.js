@@ -1,5 +1,3 @@
-import apiCall from './apiCalls'
-
 class LikeUpdate{
 
     // https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/L1bZdAjy6kkSDP9kVnHs/likes/
