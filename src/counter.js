@@ -1,12 +1,11 @@
 
 class Counter {
-    commentCounter = async (data) => {
+    commentCounter = (data) => {
         let counter = 0;
         data.forEach(element => {
             counter += 1;
         });
         return counter;
-        console.log(counter);
     }
 }
 
