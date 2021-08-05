@@ -1,4 +1,5 @@
 import apiCalls from "./apiCalls";
+import comments from "./comments";
 
 class Modal {
     openModal = async (dish) => {
@@ -14,7 +15,7 @@ class Modal {
     }
     
     getDishID = async (dish) => {
-        const myID = await dish.querySelector('.load-comment').id;
+        let myID = await dish.querySelector('.load-comment').id;
         return myID;
     }
 
@@ -25,10 +26,12 @@ class Modal {
 
         commentBtn.addEventListener('click', async () => {
             apiCalls.mealPopulate(url);
+            comments.getComments(dish);
+            let modalId = document.querySelector('.modalholder').id = id;
+            // console.log(modalId)
+            // comments.newComment(await this.getDishID(dish));
+            // console.log(await this.getDishID(dish));
         })
-
-        // console.log(url);
-        // return url
     }
 }
 

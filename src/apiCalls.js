@@ -1,4 +1,5 @@
 import modal from './modal'
+import comments from './comments'
 
 class APIUpdate {
     getBeefBtn = document.getElementById('beefBtn');
@@ -27,10 +28,12 @@ class APIUpdate {
                     dish.querySelector('.load-comment').id = element.idMeal;
                     this.container.appendChild(dish);
                     modal.openModal(dish);
-                    modal.dishURL(dish);
+                    modal.dishURL(dish);    
+                    // comments.commentHelper(element.idMeal)
                     // let url = await modal.dishURL(dish);
                     // this.mealRequest(url)
                 });
+                
             })
         })
     }
@@ -42,17 +45,15 @@ class APIUpdate {
                 modalWindow.querySelector('.container__profilepic').src = element.strMealThumb;
                 modalWindow.querySelector('.item-name').innerText = element.strMeal;
                 modalWindow.querySelector('.area').innerText = `Area: ${element.strArea}`;
-                modalWindow.querySelector('.cat').innerText = `Category ${element.strCategory}`;
+                modalWindow.querySelector('.cat').innerText = `Category: ${element.strCategory}`;
                 modalWindow.querySelector('.demonstration').src = element.strYoutube;
                 modalWindow.querySelector('.ingre').innerText = `Main Ingredient: ${element.strIngredient1}`;
-                console.log(element)
             })
-
+            
         });
-        // let meal = await info.meals;
-        // modalWindow.querySelector('.container__profilepic').src = meal.strMealThumb
-        // console.log(meal)
     }
+
+
 }
 
 const apiCall = new APIUpdate()
