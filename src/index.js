@@ -18,11 +18,20 @@ window.addEventListener('load', () => {
     const user = document.querySelector('.name').value;
     const text = document.querySelector('.comment').value;
     console.log(modalId)
-    
-  comments.sendComment(modalId, user, text);
-  document.querySelector('.name').value = '';
-  document.querySelector('.comment').value = ''
+    if(text === "" || user === "") {
+    const contain = await document.querySelector('.comment');
+    const error = document.createElement('p');
+    error.classList.add('my-color');
+      error.innerText = `Please enter a valid name & comment.`
+      contain.parentNode.insertBefore(error, contain.nextSibling);
+    }
+    else{
+      comments.sendComment(modalId, user, text);
+      document.querySelector('.name').value = '';
+      document.querySelector('.comment').value = ''
+    }
+
   })
 })
 
-
+//When comment is clicked get likes again

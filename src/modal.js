@@ -1,5 +1,6 @@
 import apiCalls from "./apiCalls";
 import comments from "./comments";
+import counter from "./counter";
 
 class Modal {
     openModal = async (dish) => {
@@ -30,7 +31,7 @@ class Modal {
             let info = await comments.getComments(dish);
             let modalId = document.querySelector('.modalholder').id = id;
             comments.appendComment(info);
-            let count = await comments.commentCounter(info);
+            let count = await counter.commentCounter(info);
             comments.appendCount(count);
             // console.log(modalId)
             // comments.newComment(await this.getDishID(dish));

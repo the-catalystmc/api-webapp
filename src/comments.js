@@ -58,15 +58,6 @@ class Comments {
           });
       }
 
-      commentCounter = async (data) => {
-          let counter = 0;
-          data.forEach(element => {
-              counter += 1;
-          });
-          return counter;
-          console.log(counter);
-      }
-
       appendCount = async (count) => {
           document.querySelector('.comments-count').innerText = `(${count})`;
       }
