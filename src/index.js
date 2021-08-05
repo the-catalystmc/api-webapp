@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-vars */
+import _ from 'lodash';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import apiCall from './apiCalls';
 import comments from './comments';
 import counter from './counter';
+import itemCount from './itemCounter';
 
 const removeError = () => {
   if (document.querySelector('.my-color') !== null) {
@@ -14,7 +17,7 @@ const comment = document.querySelector('.comment-button');
 
 window.addEventListener('load', () => {
   apiCall.asyncPopulate();
-
+  itemCount.countMeals();
   comment.addEventListener('click', async (e) => {
     e.preventDefault();
     const modalId = document.querySelector('.modalholder').id;
@@ -45,4 +48,4 @@ window.addEventListener('load', () => {
   document.querySelector('.close--button').addEventListener('click', () => {
     removeError();
   });
-});
+})

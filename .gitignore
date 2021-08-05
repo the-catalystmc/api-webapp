@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 node_modules
 .vscode/
 coverage/
 .DS_store
+=======
+# Ignore Mac system files
+.DS_store
+
+# Ignore node_modules
+node_modules/
+
+# Ignore live server settings
+.vscode/settings.json
+
+# Ignore node_modules
+coverage/
+>>>>>>> develop
