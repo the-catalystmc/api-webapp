@@ -39,7 +39,7 @@ class Comments {
       getComments = async (dish) => {
         const id = await dish.querySelector('.load-comment').id;
         const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
-        const info = await response.text();
+        const info = await response.json();
         console.log(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
         console.log(info);
         return info
@@ -47,10 +47,16 @@ class Comments {
 
       createComment = (data) => {
         let container = document.querySelector('.comments-cont');
-        const { username, comment } = data;
+        const { comment, creation_date, username } = data;
         const newScore = document.createElement('li');
-        newScore.innerHTML = `${username}: ${comment}`;
+        newScore.innerHTML = `${creation_date} ${username}: ${comment}`;
         container.appendChild(newScore);
+      }
+
+      appendComment = async (data) => {
+          data.forEach(element => {
+              this.createComment(element)
+          });
       }
 
       commentHelper = async (id) => {

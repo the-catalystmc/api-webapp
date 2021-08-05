@@ -26,8 +26,9 @@ class Modal {
 
         commentBtn.addEventListener('click', async () => {
             apiCalls.mealPopulate(url);
-            comments.getComments(dish);
+            let info = await comments.getComments(dish);
             let modalId = document.querySelector('.modalholder').id = id;
+            comments.appendComment(info)
             // console.log(modalId)
             // comments.newComment(await this.getDishID(dish));
             // console.log(await this.getDishID(dish));
