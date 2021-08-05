@@ -1,60 +1,57 @@
-import modal from './modal'
-import comments from './comments'
+import modal from './modal';
 
 class APIUpdate {
-    getBeefBtn = document.getElementById('beefBtn');
-    getTemplate = document.querySelector('.mealTemplate');
-    container = document.querySelector('.cont');
+  getBeefBtn = document.getElementById('beefBtn');
 
-    asyncRequest = async () => {
-        const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=beef')
-        const mealInfo = await response.json();
-        return mealInfo
-    }
+  getTemplate = document.querySelector('.mealTemplate');
 
-    mealRequest = async (url) => {
-        const returned = await fetch(url);
-        const meals = await returned.json();
-        return meals
-    }
+  container = document.querySelector('.cont');
 
-    asyncPopulate = async () => {
-        this.getBeefBtn.addEventListener('click', () => {
-            this.asyncRequest().then((data) => {
-                data.meals.forEach(element => {
-                    const dish = this.getTemplate.content.firstElementChild.cloneNode(true);
-                    dish.querySelector('.card-img-top').src = element.strMealThumb;
-                    dish.querySelector('.card-title').innerText = element.strMeal;
-                    dish.querySelector('.load-comment').id = element.idMeal;
-                    this.container.appendChild(dish);
-                    modal.openModal(dish);
-                    modal.commentActions(dish);    
-                    // comments.commentHelper(element.idMeal)
-                    // let url = await modal.dishURL(dish);
-                    // this.mealRequest(url)
-                });
-                
-            })
-        })
-    }
+  asyncRequest = async () => {
+    const response = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=beef');
+    const mealInfo = await response.json();
+    return mealInfo;
+  }
 
-    mealPopulate = async (url) => {
-        const modalWindow = document.querySelector('.modalholder');
-        let info = this.mealRequest(url).then((data) => {
-            data.meals.forEach(element => {
-                modalWindow.querySelector('.container__profilepic').src = element.strMealThumb;
-                modalWindow.querySelector('.item-name').innerText = element.strMeal;
-                modalWindow.querySelector('.area').innerText = `Area: ${element.strArea}`;
-                modalWindow.querySelector('.cat').innerText = `Category: ${element.strCategory}`;
-                modalWindow.querySelector('.demonstration').src = element.strYoutube;
-                modalWindow.querySelector('.ingre').innerText = `Main Ingredient: ${element.strIngredient1}`;
-            })
-            
+  mealRequest = async (url) => {
+    const returned = await fetch(url);
+    const meals = await returned.json();
+    return meals;
+  }
+
+  asyncPopulate = async () => {
+    this.getBeefBtn.addEventListener('click', () => {
+      this.asyncRequest().then((data) => {
+        data.meals.forEach((element) => {
+          const dish = this.getTemplate.content.firstElementChild.cloneNode(true);
+          dish.querySelector('.card-img-top').src = element.strMealThumb;
+          dish.querySelector('.card-title').innerText = element.strMeal;
+          dish.querySelector('.load-comment').id = element.idMeal;
+          this.container.appendChild(dish);
+          modal.openModal(dish);
+          modal.commentActions(dish);
+          // comments.commentHelper(element.idMeal)
+          // let url = await modal.dishURL(dish);
+          // this.mealRequest(url)
         });
-    }
+      });
+    });
+  }
 
-
+  mealPopulate = async (url) => {
+    const modalWindow = document.querySelector('.modalholder');
+    this.mealRequest(url).then((data) => {
+      data.meals.forEach((element) => {
+        modalWindow.querySelector('.container__profilepic').src = element.strMealThumb;
+        modalWindow.querySelector('.item-name').innerText = element.strMeal;
+        modalWindow.querySelector('.area').innerText = `Area: ${element.strArea}`;
+        modalWindow.querySelector('.cat').innerText = `Category: ${element.strCategory}`;
+        modalWindow.querySelector('.demonstration').src = element.strYoutube;
+        modalWindow.querySelector('.ingre').innerText = `Main Ingredient: ${element.strIngredient1}`;
+      });
+    });
+  }
 }
 
-const apiCall = new APIUpdate()
-export { apiCall as default }
+const apiCall = new APIUpdate();
+export { apiCall as default };
