@@ -1,6 +1,6 @@
 # Project Name
 
-Awesome Books Website
+A & R Restaurant Website
 
 This is a website that was created as a Microverse project. The website is a book storage site that allows users to add and remove books. The books are stored in the local storage and are available each time the website loads. 
 

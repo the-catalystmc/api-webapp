@@ -48,4 +48,4 @@ window.addEventListener('load', () => {
   document.querySelector('.close--button').addEventListener('click', () => {
     removeError();
   });
-})
+});
