@@ -1,3 +1,4 @@
+import modal from './modal';
 import likeCall from './likeCalls';
 
 class APIUpdate {
@@ -18,7 +19,10 @@ class APIUpdate {
           dish.querySelector('.card-img-top').src = element.strMealThumb;
           dish.querySelector('.card-title').innerText = element.strMeal;
           dish.querySelector('.likeBtn').id = element.idMeal;
+          dish.querySelector('.load-comment').id = element.idMeal;
           this.container.appendChild(dish);
+          modal.openModal(dish);
+          modal.commentActions(dish);
         });
         likeCall.likePostGet();
       });

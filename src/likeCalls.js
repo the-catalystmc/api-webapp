@@ -1,7 +1,4 @@
 class LikeUpdate {
-  // https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/L1bZdAjy6kkSDP9kVnHs/likes/
-  // OVncPxdzhK1mzS0b7fjz
-
     likePost = async (likeId) => {
       const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OVncPxdzhK1mzS0b7fjz/likes/', {
         cash: 'reload',
@@ -13,7 +10,6 @@ class LikeUpdate {
           item_id: likeId,
         }),
       }).then((response) => response.text());
-      window.location.reload();
       return response;
     }
 
@@ -38,6 +34,9 @@ class LikeUpdate {
       likebtn.forEach((element) => {
         element.addEventListener(('click'), () => {
           this.likePost(element.id);
+          setTimeout(() => {
+            this.showLikes(element);
+          }, 2000);
           this.showLikes(element);
         });
         this.showLikes(element);
