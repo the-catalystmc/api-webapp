@@ -29,7 +29,7 @@ class Modal {
             document.querySelector('.comments-cont').innerHTML = '';
             apiCalls.mealPopulate(url);
             let info = await comments.getComments(dish);
-            let modalId = document.querySelector('.modalholder').id = id;
+            document.querySelector('.modalholder').id = id;
             comments.appendComment(info);
             let count = await counter.commentCounter(info);
             comments.appendCount(count);
