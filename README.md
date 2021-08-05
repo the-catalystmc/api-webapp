@@ -2,22 +2,24 @@
 
 A & R Restaurant Website
 
-This is a website that was created as a Microverse project. The website is a book storage site that allows users to add and remove books. The books are stored in the local storage and are available each time the website loads. 
+This is a webapp that features an all beef cuisine. All meals are loaded from an external API where they are stored. The likes, and comments are also managed by external API's. 
+
+# Screenshots
+![screenshot](./a&r.jpeg)
 
 ## Built With
 
 - HTML
 - JavaScript
+- CSS3
+- Bootstrap
+- Webpack
+- Jest
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps. You can either download the zip file, or clone the repository from [here](https://github.com/the-catalystmc/awesome-books/tree/build-website). After you can open the index.html file to load the website locally.
-
-## Authors
-👤 **Arthur Borges**
-- GitHub: [@arthuborgesdev](https://github.com/arthurborgesdev)
-- Twitter: [@arthurmoises](https://twitter.com/arthurmoises)
-- LinkedIn: [Arthur Borges](https://linkedin.com/in/arthurmoises) 
+To get a local copy up and running follow these simple example steps. You can either download the zip file, or clone the repository from [here](https://github.com/the-catalystmc/api-webapp). Once the repository is available locally you can use: `npm install` to install the packages `npm start` to run the server on local server.
+To run tests `npm test` can be used.
 
 👤 **Andres Felipe Castañeda Ramos**
 - Github: [@afcastaneda223](https://github.com/afcastaneda223)
@@ -26,16 +28,16 @@ To get a local copy up and running follow these simple example steps. You can ei
 
 👤 **Rhyine Stewart**
 
-- GitHub: [@githubhandle](https://github.com/the-catalyst-mc)
-- Twitter: [@twitterhandle](https://twitter.com/catalystspeaks)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/rhyinestewart)
+- GitHub: [@the-catalyst-mc](https://github.com/the-catalyst-mc)
+- Twitter: [@catalystspeaks](https://twitter.com/catalystspeaks)
+- LinkedIn: [Rhyine Stewart](https://linkedin.com/in/rhyinestewart)
 
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/the-catalystmc/church-conference-capstone/issues).
+Feel free to check the [issues page](https://github.com/the-catalystmc/api-webapp/issues).
 
 ## Show your support
 
