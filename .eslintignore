@@ -10,3 +10,4 @@
 
 /coverage
 /coverage/lcov-report
+./coverage/lcov-report/base.css
