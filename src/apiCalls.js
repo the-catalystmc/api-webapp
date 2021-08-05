@@ -13,12 +13,6 @@ class APIUpdate {
     return mealInfo;
   }
 
-  mealRequest = async (url) => {
-    const returned = await fetch(url);
-    const meals = await returned.json();
-    return meals;
-  }
-
   asyncPopulate = async () => {
     this.getBeefBtn.addEventListener('click', () => {
       this.asyncRequest().then((data) => {
@@ -34,20 +28,6 @@ class APIUpdate {
           // let url = await modal.dishURL(dish);
           // this.mealRequest(url)
         });
-      });
-    });
-  }
-
-  mealPopulate = async (url) => {
-    const modalWindow = document.querySelector('.modalholder');
-    this.mealRequest(url).then((data) => {
-      data.meals.forEach((element) => {
-        modalWindow.querySelector('.container__profilepic').src = element.strMealThumb;
-        modalWindow.querySelector('.item-name').innerText = element.strMeal;
-        modalWindow.querySelector('.area').innerText = `Area: ${element.strArea}`;
-        modalWindow.querySelector('.cat').innerText = `Category: ${element.strCategory}`;
-        modalWindow.querySelector('.demonstration').src = element.strYoutube;
-        modalWindow.querySelector('.ingre').innerText = `Main Ingredient: ${element.strIngredient1}`;
       });
     });
   }

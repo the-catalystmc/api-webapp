@@ -1,9 +1,9 @@
 class Counter {
   commentCounter = (data) => {
     let counter = 0;
-    data.forEach((element) => {
+    for (let i = 0; i < data.length; i += 1) {
       counter += 1;
-    });
+    }
     return counter;
   }
 }

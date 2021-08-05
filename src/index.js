@@ -26,8 +26,8 @@ window.addEventListener('load', () => {
       const error = document.createElement('p');
       error.classList.add('my-color');
       contain.parentNode.insertBefore(error, contain.nextSibling);
-      error.innerText = 'Please enter a valid name & comment.';}
-    else {
+      error.innerText = 'Please enter a valid name & comment.';
+    } else {
       comments.sendComment(modalId, user, text);
       document.querySelector('.comments-cont').innerHTML = '';
       setTimeout(async () => {
@@ -40,5 +40,9 @@ window.addEventListener('load', () => {
       document.querySelector('.comment').value = '';
       removeError();
     }
+  });
+
+  document.querySelector('.close--button').addEventListener('click', () => {
+    removeError();
   });
 });
