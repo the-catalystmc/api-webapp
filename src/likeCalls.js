@@ -13,7 +13,7 @@ class LikeUpdate {
           item_id: likeId,
         }),
       }).then((response) => response.text());
-      window.location.reload();
+      // window.location.reload();
       return response;
     }
 
@@ -38,6 +38,9 @@ class LikeUpdate {
       likebtn.forEach((element) => {
         element.addEventListener(('click'), () => {
           this.likePost(element.id);
+          setTimeout(() => {
+            this.showLikes(element);
+          }, 2000);
           this.showLikes(element);
         });
         this.showLikes(element);
