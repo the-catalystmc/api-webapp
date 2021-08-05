@@ -33,9 +33,6 @@ class Modal {
             comments.appendComment(info);
             let count = await counter.commentCounter(info);
             comments.appendCount(count);
-            // console.log(modalId)
-            // comments.newComment(await this.getDishID(dish));
-            // console.log(await this.getDishID(dish));
         })
     }
 }
