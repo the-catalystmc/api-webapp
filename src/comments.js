@@ -6,7 +6,7 @@ class Comments {
 
 
     sendComment = async (id, user, info) => {
-        const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments', {
+        const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lqm14x4Z0jbMmbpCdhKq/comments', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -37,17 +37,20 @@ class Comments {
 
       getComments = async (dish) => {
         const id = await dish.querySelector('.load-comment').id;
-        const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
+        const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lqm14x4Z0jbMmbpCdhKq/comments?item_id=${id}`);
+        if(response.ok){
         const info = await response.json();
         // console.log(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
-        return info
+        return info;
+    }
+    return [];
       }
       
       updateComments = async () => {
         const id = await document.querySelector('.modalholder').id;
-        const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
+        const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lqm14x4Z0jbMmbpCdhKq/comments?item_id=${id}`);
         const info = await response.json();
-        console.log(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
+        console.log(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lqm14x4Z0jbMmbpCdhKq/comments?item_id=${id}`);
         return info
       }
 
