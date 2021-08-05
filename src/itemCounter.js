@@ -6,7 +6,7 @@ class CountItem {
     countMeals = async () => {
       apiCall.asyncRequest().then((data) => {
         this.getBeefBtn.innerText = `Beef ${data.meals.length}`;
-          return data.meals.length;
+        return data.meals.length;
       });
     }
 }

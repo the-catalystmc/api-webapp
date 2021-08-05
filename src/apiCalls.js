@@ -2,6 +2,7 @@ import likeCall from './likeCalls';
 
 class APIUpdate {
     getTemplate = document.querySelector('.mealTemplate');
+
     container = document.querySelector('.cont');
 
     asyncRequest = async () => {
