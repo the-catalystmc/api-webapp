@@ -1,0 +1,13 @@
+# Ignore dist folder
+
+/dist
+
+# Ignore webpack.config.js file
+
+/webpack.config.js
+
+# Ignore coverage folder
+
+coverage
+coverage/lcov-report
+coverage/lcov-report/base.css
