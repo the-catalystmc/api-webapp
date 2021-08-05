@@ -1,5 +1,5 @@
-import itemCount from './itemCounter'
+import itemCount from './itemCounter';
 
-describe('count Meals', () =>{
+describe('count Meals', () => {
 
 });
