@@ -19,16 +19,19 @@ class Modal {
         return myID;
     }
 
-    dishURL = async (dish) => {
+    commentActions = async (dish) => {
         let commentBtn = await dish.querySelector('.load-comment');
         let id = await dish.querySelector('.load-comment').id;
         const url = await `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
 
         commentBtn.addEventListener('click', async () => {
+            document.querySelector('.comments-cont').innerHTML = '';
             apiCalls.mealPopulate(url);
             let info = await comments.getComments(dish);
             let modalId = document.querySelector('.modalholder').id = id;
-            comments.appendComment(info)
+            comments.appendComment(info);
+            let count = await comments.commentCounter(info);
+            comments.appendCount(count);
             // console.log(modalId)
             // comments.newComment(await this.getDishID(dish));
             // console.log(await this.getDishID(dish));

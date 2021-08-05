@@ -28,7 +28,7 @@ class APIUpdate {
                     dish.querySelector('.load-comment').id = element.idMeal;
                     this.container.appendChild(dish);
                     modal.openModal(dish);
-                    modal.dishURL(dish);    
+                    modal.commentActions(dish);    
                     // comments.commentHelper(element.idMeal)
                     // let url = await modal.dishURL(dish);
                     // this.mealRequest(url)

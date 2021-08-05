@@ -41,7 +41,6 @@ class Comments {
         const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
         const info = await response.json();
         console.log(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
-        console.log(info);
         return info
       }
 
@@ -59,33 +58,18 @@ class Comments {
           });
       }
 
-      commentHelper = async (id) => {
-        //   const commentBtn = document.querySelectorAll('.load-comment');
-        //   commentBtn.forEach(element => {
-        //       element.addEventListener('click', () => {
-        //         // let id = element.id;
-        //         this.newComment(dish);
-        //         // console.log(id);
-        //       })
-             
-        //   })
-
-        comments.newComment(await id);
-        console.log(await id);
+      commentCounter = async (data) => {
+          let counter = 0;
+          data.forEach(element => {
+              counter += 1;
+          });
+          return counter;
+          console.log(counter);
       }
 
-    //   likePostGet = async () => {
-    //     const likebtn = document.querySelectorAll('.likeBtn')
-    //     likebtn.forEach(element => {
-    //     element.addEventListener(('click'), ()=>{
-    //     this.likePost(element.id)
-    //     this.showLikes(element)
-    //     })
-    //     this.showLikes(element)
-    //     });
-        
-    //     } 
+      appendCount = async (count) => {
+          document.querySelector('.comments-count').innerText = `(${count})`;
+      }
 }
-
 const comments = new Comments()
 export { comments as default }
