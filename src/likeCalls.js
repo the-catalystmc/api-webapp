@@ -1,5 +1,4 @@
 class LikeUpdate {
-
     likePost = async (likeId) => {
       const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/OVncPxdzhK1mzS0b7fjz/likes/', {
         cash: 'reload',
