@@ -1,11 +1,11 @@
 # Ignore dist folder
 
-/dist
+dist/
 
 # Ignore webpack.config.js file
 
-/webpack.config.js
+webpack.config.js/
 
 # Ignore coverage folder
 
-/coverage
+coverage/
