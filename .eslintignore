@@ -8,6 +8,6 @@
 
 # Ignore coverage folder
 
-/coverage
-/coverage/lcov-report
-./coverage/lcov-report/base.css
+coverage
+coverage/lcov-report
+coverage/lcov-report/base.css
