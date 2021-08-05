@@ -40,7 +40,6 @@ class Comments {
         const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/lqm14x4Z0jbMmbpCdhKq/comments?item_id=${id}`);
         if(response.ok){
         const info = await response.json();
-        // console.log(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/wGa7mlp2XOLConTNWxUe/comments?item_id=${id}`);
         return info;
     }
     return [];
@@ -57,7 +56,8 @@ class Comments {
       createComment = (data) => {
         let container = document.querySelector('.comments-cont');
         const { comment, creation_date, username } = data;
-        const newScore = document.createElement('li');
+
+        const newScore = document.createElement('p');
         newScore.innerHTML = `${creation_date} ${username}: ${comment}`;
         container.appendChild(newScore);
       }
