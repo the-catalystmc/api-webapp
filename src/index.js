@@ -2,10 +2,10 @@
 import _ from 'lodash';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import apiCall from './apiCalls';
-import comments from './comments';
-import counter from './counter';
-import itemCount from './itemCounter';
+import apiCall from './apiCalls.js';
+import comments from './comments.js';
+import counter from './counter.js';
+import itemCount from './itemCounter.js';
 
 const removeError = () => {
   if (document.querySelector('.my-color') !== null) {

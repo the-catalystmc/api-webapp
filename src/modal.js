@@ -1,5 +1,5 @@
-import comments from './comments';
-import counter from './counter';
+import comments from './comments.js';
+import counter from './counter.js';
 
 class Modal {
   openModal = async (dish) => {

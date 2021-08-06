@@ -1,5 +1,5 @@
-import modal from './modal';
-import likeCall from './likeCalls';
+import modal from './modal.js';
+import likeCall from './likeCalls.js';
 
 class APIUpdate {
     getTemplate = document.querySelector('.mealTemplate');
@@ -13,7 +13,7 @@ class APIUpdate {
     }
 
     asyncPopulate = async () => {
-      this.asyncRequest().then( async (data) => {
+      this.asyncRequest().then(async (data) => {
         data.meals.forEach((element) => {
           const dish = this.getTemplate.content.firstElementChild.cloneNode(true);
           dish.querySelector('.card-img-top').src = element.strMealThumb;

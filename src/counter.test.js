@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import counter from './counter';
+import counter from './counter.js';
 
 test('Should count the items in a given array', () => {
   // Arrange
