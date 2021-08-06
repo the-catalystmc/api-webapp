@@ -15,9 +15,9 @@ const removeError = () => {
 
 const comment = document.querySelector('.comment-button');
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   apiCall.asyncPopulate();
-  itemCount.countMeals();
+  itemCount.populateItemCounter();
   comment.addEventListener('click', async (e) => {
     e.preventDefault();
     const modalId = document.querySelector('.modalholder').id;

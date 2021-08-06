@@ -13,7 +13,7 @@ class APIUpdate {
     }
 
     asyncPopulate = async () => {
-      this.asyncRequest().then((data) => {
+      this.asyncRequest().then( async (data) => {
         data.meals.forEach((element) => {
           const dish = this.getTemplate.content.firstElementChild.cloneNode(true);
           dish.querySelector('.card-img-top').src = element.strMealThumb;
