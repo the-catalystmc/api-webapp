@@ -8,13 +8,15 @@ This is a webapp that features an all beef cuisine. All meals are loaded from an
 ![screenshot](./a&r.jpeg)
 
 ## Built With
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+- ![BOOTSTRAP](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-- HTML
-- JavaScript
-- CSS3
-- Bootstrap
-- Webpack
-- Jest
+## Live Demo
+You can see my page live here: 
+[Check it out!](https://the-catalystmc.github.io/api-webapp/)
 
 ## Getting Started
 
