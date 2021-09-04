@@ -16,7 +16,7 @@ This is a webapp that features an all beef cuisine. All meals are loaded from an
 
 ## Live Demo
 You can see my page live here: 
-[Check it out!](https://the-catalystmc.github.io/api-webapp/)
+[Check it out!]( https://the-catalystmc.github.io/beef-restaurant/)
 
 ## Getting Started
 
